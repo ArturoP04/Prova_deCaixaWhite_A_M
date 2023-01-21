@@ -12,13 +12,10 @@ public class RetiradaDeCotxes {
 
     /**
      */
-    public static String[][] cotxes = {
-        {"1", "6057-ZDD", "Gasoil", "2008"},
-        {"2", "9402-JXP", "Diesel", "2009"},
-        {"3", "6764-KCR", "Gasoil", "2018"},
-        {"4", "1121-UPX", "Diesel", "2017"},
-        {"5", "9297-GHX", "Diesel", "2007"},
-        {"6", "8354-SBQ", "Gasoil", "2012"}
+  public static String[][] cotxes = {
+        {"1", "2453-SFE", "Diesel", "2009"},
+        {"2", "5854-NJP", "Diesel", "2019"},
+        {"3", "3560-FFO", "Gasoil", "2009"}
     };
 
     private static String[][] cotxesRetirats = new String[1][4];
@@ -59,19 +56,21 @@ public class RetiradaDeCotxes {
         System.out.println("0. Sortir");
     }
 
+
     public static void Verifacio() {
         int Matricula = 2010;
         int comptadortrobat = 1;
-        /*PASSEM 3 VALOR A INT*/
-
- /*   if (number < 2010) {
-         */
         trobat = false;
         int comptadortest = 1;
+        
         for (int z = 0; z < cotxes.length; z++) {/*BUCLE FOR AMB CONDICIÓ DE TROBAR*/
             if ((cotxes[z][2] == "Diesel") && (Integer.parseInt(cotxes[z][3]) < Matricula)) {
                 poscotxe = z;
                 trobat = true;
+                System.out.println("Cotxe " + z + " no compleix els requisits.");
+            }
+            else{
+                System.out.println("Cotxe " + z + " compleix els requisits.");
             }
 
          if (trobat) {
@@ -85,13 +84,6 @@ public class RetiradaDeCotxes {
                         }
                     }
                         cotxesRetirats = aux;
-//                     String[][] cotxesRetirats = new String[comptadortest][4];
-//
-//                    for (int k = 0; k < aux.length; k++) {
-//                        for  (int l = 0; l < 4; l++) {
-//                              cotxesRetirats[k][l] = aux[k][l];
-//                        }
-//                    }
 
                 }
                 for (int b = 0, n = 0; n < 4; n++) {

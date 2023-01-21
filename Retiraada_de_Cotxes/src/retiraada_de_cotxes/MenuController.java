@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 /**
  *
- * @author Marc
+ * @author Marc 
+ * @author Arturo
  */
 public class MenuController {
   
